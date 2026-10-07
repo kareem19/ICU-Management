@@ -449,13 +449,13 @@ export default function PatientChartPage() {
                       <LabChip label="PaCO2" value={l.paco2} unit="mmHg" />
                       <LabChip label="PaO2" value={l.pao2} unit="mmHg" />
                       <LabChip label="HCO3" value={l.hco3} unit="mEq" />
-                      <LabChip label="Lactate" value={l.lactate} unit="mmol" warn={l.lactate && l.lactate > 2} />
+                      <LabChip label="Lactate" value={l.lactate} unit="mmol" warn={l.lactate ? l.lactate > 2 : false} />
                       <LabChip label="WBC" value={l.wbc} unit="×10³" />
                       <LabChip label="Hgb" value={l.hgb} unit="g/dL" />
                       <LabChip label="Plt" value={l.platelets} unit="×10³" />
-                      <LabChip label="Cr" value={l.creatinine} unit="mg/dL" warn={l.creatinine && l.creatinine > 1.5} />
+                      <LabChip label="Cr" value={l.creatinine} unit="mg/dL" warn={l.creatinine ? l.creatinine > 1.5 : false} />
                       <LabChip label="Na" value={l.sodium} unit="mEq" />
-                      <LabChip label="K" value={l.potassium} unit="mEq" warn={l.potassium && (l.potassium > 5.2 || l.potassium < 3.5)} />
+                      <LabChip label="K" value={l.potassium} unit="mEq" warn={l.potassium ? (l.potassium > 5.2 || l.potassium < 3.5) : false} />
                       <LabChip label="ALT" value={l.alt} unit="U/L" />
                       <LabChip label="AST" value={l.ast} unit="U/L" />
                     </div>
